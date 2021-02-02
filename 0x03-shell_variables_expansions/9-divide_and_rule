@@ -1,2 +1,2 @@
 #!/bin/bashi
-echo $(($POWER/DIVIDE))
+echo $(( $POWER / $DIVIDE ))
