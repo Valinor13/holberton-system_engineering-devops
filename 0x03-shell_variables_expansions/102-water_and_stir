@@ -1,0 +1,2 @@
+#!/bin/bash
+alias behlnort='$((5#$WATER + 5#$STIR))' | printf '%f\n' 8#behlnort
