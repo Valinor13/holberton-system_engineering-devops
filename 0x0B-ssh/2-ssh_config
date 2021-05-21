@@ -1,0 +1,7 @@
+Host Holberton
+	HostName 52.87.217.148
+	IdentifyFile ~/.ssh/holberton
+	StrictHostKeyChecking no
+	User ubuntu
+	Port 22
+	PasswordAuthentication no
