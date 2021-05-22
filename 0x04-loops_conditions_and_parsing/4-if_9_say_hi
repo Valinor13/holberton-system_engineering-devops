@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#This script will print Holberton School 10 times with a Hi after the 9th
+
+x=0
+
+while [ $x -le 9 ]
+do
+	if [[ "$x" ==  '9' ]]; then
+		echo "Hi"
+	fi
+	echo "Holberton School"
+	((x++))
+
+done
