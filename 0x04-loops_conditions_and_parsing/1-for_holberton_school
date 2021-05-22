@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#For loop to echo 10 times Holberton School
 for i in {0..10}
 do
 	echo "Holberton School"
