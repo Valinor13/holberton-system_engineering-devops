@@ -3,7 +3,7 @@
 
 ls_array=($(ls))
 
-for filename in ${ls_array[@]}
+for filename in "${ls_array[@]}"
 do
-	echo $filename | cut -d'-' -f 2-
+	echo "$filename" | cut -d'-' -f 2-
 done
