@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#This script prints fizzbuzz 1 to 100
+
+for x in {1..100}
+do
+	if [[ $((x % 15)) -eq 0 ]]; then
+		echo "FizzBuzz"
+	elif [[ $((x % 5)) -eq 0 ]]; then
+		echo "Buzz"
+	elif [[ $((x % 3)) -eq 0 ]]; then
+		echo "Fizz"
+	else
+		echo "$x"
+	fi
+done
