@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Looking up info from sites
 
+sudo apt-get -y update
+sudo apt-get -y install dnsutils
 printInfo() {
 	output=$($2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
 	pout=$(echo $output | awk '{print $1}')
