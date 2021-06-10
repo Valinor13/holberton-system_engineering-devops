@@ -2,18 +2,18 @@
 # Looking up info from sites
 
 printInfo() {
-	output=$( $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
+	output=$($2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
 	pout=$(echo $output | awk '{print $1}')
 	ipout=$(echo $output | awk '{print $2}')
 	echo "The subdomain $2 is a $pout record and points to $ipout"
 }
 
-if [[ $# -eq 1 ]]; then
+if [ $# -eq 1 ]; then
 	printInfo $1 www
 	printInfo $1 lb-01
 	printInfo $1 web-01
 	printInfo $1 web-02
 
-elif [[ $# -eq 2 ]]; then
+elif [ $# -eq 2 ]; then
 	printInfo $1 $2
 fi
