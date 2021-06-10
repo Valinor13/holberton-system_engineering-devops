@@ -9,6 +9,6 @@ sudo echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 sudo touch /var/www/html/custom_404.html
 sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 
-sudo sed -i "0,/location \/ {/s//error_page 404 \/custom_404.html;\n\n\tlocation \/redirect_me {\n\t\treturn 301 \$scheme:\/\/https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n\t}\n\n\tlocation \/ {/" /etc/nginx/sites-available/default
+sudo sed -i "0,/location \/ {/s//error_page 404 \/custom_404.html;\n\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/www.youtube.com\/watch?v=QH2-TGUlwu4;\n\t}\n\n\tlocation \/ {/" /etc/nginx/sites-available/default
 
 sudo service nginx restart
