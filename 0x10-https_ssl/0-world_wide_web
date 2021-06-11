@@ -2,7 +2,7 @@
 # Looking up info from sites
 
 printInfo() {
-	output=$($2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
+	output=$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | awk '{print $4,$5}')
 	pout=$(echo $output | awk '{print $1}')
 	ipout=$(echo $output | awk '{print $2}')
 	echo "The subdomain $2 is a $pout record and points to $ipout"
