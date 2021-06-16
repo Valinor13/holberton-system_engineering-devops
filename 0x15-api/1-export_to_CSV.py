@@ -2,14 +2,14 @@
 """ A module to convert API information to a CSV file """
 
 
-import requests
 import csv
+import requests
 import sys
 
 
 def get_employee_tasks(employeeId):
     """ Get the employee tasks from API """
-    name = ''
+    username = ''
     task_list = []
 
     usersRes = requests.get(
@@ -18,13 +18,13 @@ def get_employee_tasks(employeeId):
     todosRes = requests.get(
         'https://jsonplaceholder.typicode.com/users/{}/todos'.format(
             employeeId))
-    name = usersRes.json().get('name')
+    username = usersRes.json().get('username')
     todosJson = todosRes.json()
 
     for task in todosJson:
         taskRow = []
         taskRow.append(employeeId)
-        taskRow.append(name)
+        taskRow.append(username)
         taskRow.append(task.get('completed'))
         taskRow.append(task.get('title'))
         task_list.append(taskRow)
