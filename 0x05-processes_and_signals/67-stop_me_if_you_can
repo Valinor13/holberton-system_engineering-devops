@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Write a Bash script that stops 7-highlander process.
+
+pkill -f 'bash ./7-highlander'
